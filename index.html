@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="js/warriors.js"></script>
+    <script type="text/javascript" src="js/fight.js"></script>
+    <script type="text/javascript" src="js/pit-fight.js"></script>
+    <script type="text/javascript" src="js/assault-fight.js"></script>
+  </head>
+  <body>
+    <h1>Vikings</h1>
+  </body>
+  <script type="text/javascript">
+    var viking1 = new Viking('viking1',600,20);
+    var viking2 = new Viking('viking2',800,25);
+
+    var pitFight = new PitFight(viking1,viking2,6);
+    pitFight.startFight();
+
+    var saxons = [];
+    for (var i=0; i<=10; i++) {
+      saxons.push(new Saxon());
+    }
+
+    team1 = [viking1,viking2];
+
+    var assaultFight = new AssaultFight(team1,saxons);
+    assaultFight.startFight();
+  </script>
+</html>
